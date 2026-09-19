@@ -1,0 +1,47 @@
+# Android / Gradle
+.gradle/
+build/
+**/build/
+local.properties
+*.iml
+.idea/
+.cxx/
+captures/
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+
+# Secrets — never commit
+.env
+.env.*
+!.env.example
+**/secrets.properties
+**/local.properties
+
+# Kotlin
+.kotlin/
+
+# Flutter
+flutter/**/.dart_tool/
+flutter/**/.packages
+flutter/**/.flutter-plugins
+flutter/**/.flutter-plugins-dependencies
+flutter/**/build/
+flutter/example/.dart_tool/
+flutter/example/build/
+
+# Python CLI
+cli/**/__pycache__/
+cli/**/*.egg-info/
+cli/.venv/
+cli/dist/
+*.pyc
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
