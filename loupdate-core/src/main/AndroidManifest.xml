@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <application>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.loupdate.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/loupdate_file_paths" />
+        </provider>
+
+        <receiver
+            android:name=".internal.InstallResultReceiver"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.ForceUpdateActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Loupdate.Force"
+            android:launchMode="singleTop" />
+    </application>
+</manifest>

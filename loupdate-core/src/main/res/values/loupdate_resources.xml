@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="loupdate_update">Update</string>
+    <string name="loupdate_later">Later</string>
+    <string name="loupdate_downloading">Downloading…</string>
+    <string name="loupdate_installing">Installing…</string>
+    <string name="loupdate_error">Update failed</string>
+    <string name="loupdate_retry">Retry</string>
+    <color name="loupdate_scrim">#CC0B0F14</color>
+    <color name="loupdate_surface">#FF141A22</color>
+    <color name="loupdate_on_surface">#FFF2F4F7</color>
+    <color name="loupdate_muted">#FF9AA3B2</color>
+    <color name="loupdate_accent">#FF3DDC97</color>
+    <style name="Theme.Loupdate.Force" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowBackground">@color/loupdate_scrim</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@color/loupdate_scrim</item>
+    </style>
+</resources>
