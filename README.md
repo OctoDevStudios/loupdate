@@ -41,6 +41,18 @@ implementation("com.loupdate:loupdate-core:0.1.0")
 // or include the module from this repo while developing
 ```
 
+**Theme :** the host app must use a **Material** theme (Material 3 recommended), e.g. in `themes.xml` / manifest:
+
+```xml
+<style name="Theme.MyApp" parent="Theme.Material3.DayNight.NoActionBar" />
+```
+
+```xml
+<application android:theme="@style/Theme.MyApp" ...>
+```
+
+Without that, the soft-update dialog (`MaterialAlertDialogBuilder`) can crash. Force update uses its own Material theme.
+
 See [examples/kotlin-app](examples/kotlin-app).
 
 ### 3. Publish an update
@@ -108,6 +120,7 @@ Rules: update if `versionCode` > installed; **force** if `force: true` or instal
 
 ## Important
 
+- Host app theme must be **Material** (`Theme.Material3.*` or `Theme.MaterialComponents.*`).
 - Sign the new APK with the **same keystore** as the installed app.
 - Use a **read-only** key in the client; never ship the publish / master key.
 - Play Store apps: do **not** use sideload OTA (policy). Loupdate is for **off-Play** distribution.
